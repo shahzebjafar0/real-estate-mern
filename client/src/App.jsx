@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import { About, Home, NotFound, SignIn, SignUp } from "./pages";
 import "./index.css";
+import Header from "./components/Header";
 
 function App() {
   const routing = useRoutes([
@@ -36,6 +37,7 @@ function App() {
   return (
     <div>
       <Toaster position="top-center" reverseOrder={false} />
+      <Header/>
       <Suspense fallback="...loading">{routing}</Suspense>
     </div>
   );
